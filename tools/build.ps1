@@ -144,6 +144,7 @@ if ($music) {
 $runtimeHtml = $html.Replace("/*__CONFIG__*/", "")
 Set-Content -LiteralPath $outPath -Value $runtimeHtml -Encoding UTF8
 Copy-Item -LiteralPath $outPath -Destination (Join-Path $deployDir "index.html") -Force
+Copy-Item -LiteralPath $outPath -Destination (Join-Path $deployDir "birthday.html") -Force
 Copy-Item -LiteralPath $outPath -Destination (Join-Path $deployDir "404.html") -Force
 Set-Content -LiteralPath (Join-Path $deployDir ".nojekyll") -Value "" -Encoding UTF8
 Set-Content -LiteralPath (Join-Path $deployDir "robots.txt") -Value "User-agent: *`nDisallow: /`n" -Encoding UTF8
@@ -153,6 +154,11 @@ if (Test-Path -LiteralPath $editorPath) {
   $templateBase64 = [Convert]::ToBase64String($templateBytes)
   $editorHtml = [Regex]::Replace($editorHtml, 'const TEMPLATE_BASE64="__BIRTHDAY_TEMPLATE_BASE64__";', 'const TEMPLATE_BASE64="' + $templateBase64 + '";', 1)
   Set-Content -LiteralPath $editorOutPath -Value $editorHtml -Encoding UTF8
+  Copy-Item -LiteralPath $editorOutPath -Destination (Join-Path $deployDir "editor.html") -Force
+}
+$emailPath = Join-Path $ProjectRoot "email.html"
+if (Test-Path -LiteralPath $emailPath) {
+  Copy-Item -LiteralPath $emailPath -Destination (Join-Path $deployDir "email.html") -Force
 }
 $sizeMb = [Math]::Round((Get-Item -LiteralPath $outPath).Length / 1MB, 2)
 $stats = @{
