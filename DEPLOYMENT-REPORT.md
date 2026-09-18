@@ -1,4 +1,4 @@
-# Deployment Report
+﻿# Deployment Report
 
 日期：2026-09-18  
 狀態：本機 GitHub Pages 部署檔已完成；正式 GitHub repo / Pages 尚未建立。
@@ -16,7 +16,7 @@
 預期格式：
 
 ```text
-https://YOUR-GITHUB-USERNAME.github.io/starlit-birthday/
+https://cl0905.github.io/starlit-birthday/
 ```
 
 ## 3. Repository Visibility
@@ -108,7 +108,7 @@ dist/asset-stats.json
 目前 placeholder URL：
 
 ```text
-https://YOUR-GITHUB-USERNAME.github.io/starlit-birthday/
+https://cl0905.github.io/starlit-birthday/
 ```
 
 正式部署後需要替換成真正 Pages URL。
@@ -152,3 +152,4 @@ powershell -ExecutionPolicy Bypass -File .\tools\build.ps1
 2. 告訴我 GitHub 帳號名稱、Repository 名稱，以及是否建立 Public repo，然後你在本機完成 GitHub 授權流程。
 
 不要提供 GitHub 密碼或 token 到對話中。
+

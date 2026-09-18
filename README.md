@@ -1,4 +1,4 @@
-# Birthday Project
+﻿# Birthday Project
 
 這是一個一次性生日驚喜製作工具，不是平台，也不是給收件人用的編輯系統。
 
@@ -104,13 +104,13 @@ starlit-birthday
 部署後網址會像：
 
 ```text
-https://YOUR-GITHUB-USERNAME.github.io/starlit-birthday/
+https://cl0905.github.io/starlit-birthday/
 ```
 
 部署成功後，請把 `email.html` 裡的：
 
 ```text
-https://YOUR-GITHUB-USERNAME.github.io/starlit-birthday/
+https://cl0905.github.io/starlit-birthday/
 ```
 
 替換成正式網址。這個網址目前集中在 email 裡的按鈕和純文字備援兩處。
@@ -183,3 +183,4 @@ Editor 會估算最終 HTML 大小；`build.ps1` 會輸出 `dist/asset-stats.jso
 - `build.ps1` 不會自動壓縮音樂，只會內嵌並提示大小。
 - 麥克風是額外玩法，`file://` 或權限拒絕時直接按「吹蠟燭」即可。
 - Gmail 和 iOS 可能阻止直接預覽 HTML 附件，下載後用瀏覽器開啟最穩。
+
