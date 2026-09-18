@@ -9,6 +9,8 @@
 
 assets-source/*
 !assets-source/README.md
+birthday-config*.json
+.recover-edge-leveldb/
 
 dist/*.zip
 dist/send-final-only/
